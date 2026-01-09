@@ -1,5 +1,7 @@
+### Send a GET request for a story
 GET https://hacker-news.firebaseio.com/v0/item/8863.json?print=pretty HTTP/1.1
 
-###
+// You must separeate multiple requests with the ### sequence
+### Send a GET request for a job
 
 GET https://hacker-news.firebaseio.com/v0/item/192327.json?print=pretty HTTP/1.1
