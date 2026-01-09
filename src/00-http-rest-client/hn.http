@@ -1,3 +1,5 @@
+// Hacker News API: https://github.com/HackerNews/API
+
 ### Send a GET request for a story
 GET https://hacker-news.firebaseio.com/v0/item/8863.json?print=pretty HTTP/1.1
 
