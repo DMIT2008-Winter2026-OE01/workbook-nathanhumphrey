@@ -8,6 +8,13 @@ HTML for list topic list item
 const topicForm = document.querySelector('.new-topic-form');
 const topicsList = document.querySelector('.topics-list');
 
+function addTopicToPage(topicName, topicsListElement) {
+  const newTopicItem = `<li class="list-group-item">
+      ${topicName}
+    </li>`;
+    topicsListElement.innerHTML += newTopicItem;
+}
+
 topicForm.addEventListener('submit', (event) => {
   // Do not submit the form and reload the page!
   event.preventDefault();
@@ -19,5 +26,6 @@ topicForm.addEventListener('submit', (event) => {
     input.classList.add('is-invalid');
   } else {
     input.classList.remove('is-invalid');
+    addTopicToPage(inputValue, topicsList);
   }
 });
