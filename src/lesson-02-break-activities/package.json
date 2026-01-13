@@ -1,0 +1,15 @@
+{
+  "name": "lesson-02-break-activities",
+  "version": "1.0.0",
+  "description": "lesson 02 demo",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^7.3.1"
+  }
+}

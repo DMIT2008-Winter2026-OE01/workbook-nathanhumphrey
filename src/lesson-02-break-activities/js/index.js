@@ -4,3 +4,5 @@ HTML for list topic list item
     NEW TOPIC HERE
 </li>
 */
+
+console.log('index.js loaded');
