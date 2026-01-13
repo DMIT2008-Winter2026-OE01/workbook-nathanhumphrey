@@ -5,4 +5,5 @@ HTML for list topic list item
 </li>
 */
 
-console.log('index.js loaded');
+const topicForm = document.querySelector('.new-topic-form');
+const topicsList = document.querySelector('.topics-list');
