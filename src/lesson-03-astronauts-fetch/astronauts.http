@@ -1,0 +1,7 @@
+// https://lldev.thespacedevs.com 
+
+### GET astronauts
+GET https://lldev.thespacedevs.com/2.3.0/astronauts HTTP/1.1
+
+### GET Canadian astronauts
+GET https://lldev.thespacedevs.com/2.3.0/astronauts?mode=list&nationality=Canadian HTTP/1.1

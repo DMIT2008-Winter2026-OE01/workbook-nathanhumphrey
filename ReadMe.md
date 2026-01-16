@@ -1,6 +1,6 @@
 # DMIT2008 - **Student Workbook** (Jan 2026) ![Docs](https://img.shields.io/badge/Documentation%20Status-%7E10%25%20Minimal%20Outline-lightgrey?logo=Read%20the%20Docs)
 
-> **STUDENT_NAME** - Place your name in this line.
+> **Nathan Humphrey**
 
 📺 [**How to Get Started with VS Code**](https://youtu.be/EUJlVYggR1Y?si=Zdeo5EC8_fxhdijg)
 
