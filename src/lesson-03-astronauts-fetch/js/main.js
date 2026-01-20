@@ -10,8 +10,21 @@ import { renderAstronautListItem } from './dom/astronaut.js';
 // await (not necessary since ES2022 [13th version], but 
 // kept here for compatibility)
 async function app() {
-  let astronauts = await getAstronautList();
-  console.log(astronauts);
+  let astronautResponse = await getAstronautList();
+  
+  console.log(astronautResponse); // debug
+
+  // Traditional object property access
+  // const results = astronauts.results;
+  // Use destructuring instead:
+  const { results: astronauts } = astronautResponse;
+  
+  // Get the list
+  const astronautList = document.querySelector('.astronaut-list');
+  astronauts.forEach((astronaut) => {
+    renderAstronautListItem(astronaut, astronautList);
+  });
+
 }
 
 // Run the application
