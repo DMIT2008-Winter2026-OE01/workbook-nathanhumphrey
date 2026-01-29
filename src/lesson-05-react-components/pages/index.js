@@ -5,8 +5,8 @@ export default function Home() {
       <hr className="border-2 border-sky-600 mt-2 mb-4" />
       <form>
         <div className="mb-3">
-          <div class="flex items-center space-x-4">
-            <div class="flex flex-col mb-4">
+          <div className="flex items-center space-x-4">
+            <div className="flex flex-col mb-4">
               <label htmlFor="new-topic-input" className="text-md font-bold">Activity description</label>
               <input type="text" name="new-topic" className="p-1.5 border border-solid border-sky-600 rounded-md focus-visible:outline-sky-700 focus-visible:outline-2" id="new-topic-input" />
             </div>
