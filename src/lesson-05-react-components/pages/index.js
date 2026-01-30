@@ -1,8 +1,9 @@
+import PageHeader from '@/components/PageHeader';
+
 export default function Home() {
   return (
     <div className="max-w-[1200px] mx-auto p-4">
-      <h1 className="text-2xl font-bold">Lesson 05 - React Components</h1>
-      <hr className="border-2 border-sky-600 mt-2 mb-4" />
+      <PageHeader tagline="Home page" />
       <form>
         <div className="mb-3">
           <div className="flex items-center space-x-4">
