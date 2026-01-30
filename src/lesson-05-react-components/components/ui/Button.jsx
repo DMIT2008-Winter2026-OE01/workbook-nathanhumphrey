@@ -1,3 +1,5 @@
+// children is a special prop in React that allows you to pass
+// components, elements, or text between the opening and closing tags of a component
 export default function Button({ children, type }) {
   const buttonType = type || 'button';
   return (

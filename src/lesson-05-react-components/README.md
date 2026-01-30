@@ -1,3 +1,33 @@
+# Lesson 05 - React Components
+
+## `components/PageHeader.jsx`
+
+This file demonstrates a basic React component (`<PageHeader>`) with a simple prop. Props are passed to React components via the `props` parameter. Individual props can be access via destructuring insied the parameter list for easier access. The `<PageHeader>` component also demonstrates how to conditionally render a part of the UI using the `&&` (**and**) operator.
+
+More information about passing props to components can be found here: https://react.dev/learn/passing-props-to-a-component.
+
+More information about conditional rendering can be found here: https://react.dev/learn/conditional-rendering.
+
+## `components/ActivityForm.jsx`
+
+This file demonstrates a component (`<ActivityForm>`) that utilizes another component to compose its UI. React components can be used in a similar fashion to HTML container elements, where children can be passed to a component via the `children` prop. In this file, the `<Button>` component demonstrates how children may be passed to a component.
+
+More information about passing props as children can be found here: https://react.dev/learn/passing-props-to-a-component#passing-jsx-as-children.
+
+## `components/ActivititsList.jsx`
+
+This file demonstrates a component (`<AcitivitiesList>`) that renders a list of elements. Rendering lists is made simple by support from React. Simply include an array of React components and React will render them. A common way to render arrays of elements is to use the `Array.map(fn)` function, where  `fn` arg returns a React component. Just ensure that each list component contains a `key` prop for React's virtual DOM, as its necessary for proper component tracking.
+
+More information on rendering lists can be found here: https://react.dev/learn/rendering-lists.
+
+## `components/ui/Button.jsx`
+
+This file demonstrates a component (`<Button>`) that renders `children`. `children` is a special prop that provides access to any JSX or browser elements that may have been nested inside a React component's tags.
+
+More information about passing props as children can be found here: https://react.dev/learn/passing-props-to-a-component#passing-jsx-as-children.
+
+# Next.js Skeleton
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
 ## Getting Started
