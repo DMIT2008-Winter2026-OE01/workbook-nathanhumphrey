@@ -1,0 +1,762 @@
+{
+  "astronauts": [
+    {
+      "id": 5,
+      "url": "https://lldev.thespacedevs.com/2.3.0/astronauts/5/",
+      "name": "Chris Hadfield",
+      "status": {
+        "id": 2,
+        "name": "Retired"
+      },
+      "agency": {
+        "response_mode": "list",
+        "id": 16,
+        "url": "https://lldev.thespacedevs.com/2.3.0/agencies/16/",
+        "name": "Canadian Space Agency",
+        "abbrev": "CSA",
+        "type": {
+          "id": 1,
+          "name": "Government"
+        }
+      },
+      "image": {
+        "id": 568,
+        "name": "Chris Hadfield official portrait",
+        "image_url": "https://thespacedevs-dev.nyc3.digitaloceanspaces.com/media/images/chris_hadfield_image_20220911034200.jpeg",
+        "thumbnail_url": "https://thespacedevs-dev.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305190208.jpeg",
+        "credit": "NASA",
+        "license": {
+          "id": 4,
+          "name": "NASA Image and Media Guidelines",
+          "priority": 0,
+          "link": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
+        },
+        "single_use": true,
+        "variants": []
+      },
+      "response_mode": "list",
+      "type": {
+        "id": 2,
+        "name": "Government"
+      },
+      "in_space": false,
+      "time_in_space": "P165DT16H19M",
+      "eva_time": "PT14H50M",
+      "age": 66,
+      "date_of_birth": "1959-08-29",
+      "date_of_death": null,
+      "nationality": [
+        {
+          "id": 26,
+          "name": "Canada",
+          "alpha_2_code": "CA",
+          "alpha_3_code": "CAN",
+          "nationality_name": "Canadian",
+          "nationality_name_composed": "Canado"
+        }
+      ],
+      "bio": "Chris Austin Hadfield is a Canadian retired astronaut, engineer, and former Royal Canadian Air Force fighter pilot.\r\nThe first Canadian to walk in space, Hadfield has flown two space shuttle missions and served as commander of the International Space Station.",
+      "wiki": "https://en.wikipedia.org/wiki/Chris_Hadfield",
+      "last_flight": "2012-12-19T12:12:35Z",
+      "first_flight": "1995-11-12T12:30:43Z",
+      "social_media_links": [
+        {
+          "id": 208,
+          "social_media": {
+            "id": 1,
+            "name": "X",
+            "url": "https://x.com",
+            "logo": {
+              "id": 2320,
+              "name": "X logo",
+              "image_url": "https://thespacedevs-dev.nyc3.digitaloceanspaces.com/media/images/x_logo_image_20250211191027.jpg",
+              "thumbnail_url": "https://thespacedevs-dev.nyc3.digitaloceanspaces.com/media/images/x_logo_image_thumbnail_20250211191027.jpeg",
+              "credit": "X",
+              "license": {
+                "id": 1,
+                "name": "Unknown",
+                "priority": 9,
+                "link": null
+              },
+              "single_use": true,
+              "variants": []
+            }
+          },
+          "url": "https://twitter.com/Cmdr_Hadfield"
+        },
+        {
+          "id": 209,
+          "social_media": {
+            "id": 2,
+            "name": "Instagram",
+            "url": "https://instagram.com",
+            "logo": {
+              "id": 2322,
+              "name": "Instagram logo",
+              "image_url": "https://thespacedevs-dev.nyc3.digitaloceanspaces.com/media/images/instagram_logo_image_20250211191139.png",
+              "thumbnail_url": "https://thespacedevs-dev.nyc3.digitaloceanspaces.com/media/images/instagram_logo_image_thumbnail_20250211191139.png",
+              "credit": "Instagram",
+              "license": {
+                "id": 1,
+                "name": "Unknown",
+                "priority": 9,
+                "link": null
+              },
+              "single_use": true,
+              "variants": []
+            }
+          },
+          "url": "https://www.instagram.com/colchrishadfield/"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "url": "https://lldev.thespacedevs.com/2.3.0/astronauts/6/",
+      "name": "David Saint-Jacques",
+      "status": {
+        "id": 1,
+        "name": "Active"
+      },
+      "agency": {
+        "response_mode": "list",
+        "id": 16,
+        "url": "https://lldev.thespacedevs.com/2.3.0/agencies/16/",
+        "name": "Canadian Space Agency",
+        "abbrev": "CSA",
+        "type": {
+          "id": 1,
+          "name": "Government"
+        }
+      },
+      "image": {
+        "id": 866,
+        "name": "[AUTO] David Saint-Jacques - image",
+        "image_url": "https://thespacedevs-dev.nyc3.digitaloceanspaces.com/media/images/david_saint-jac_image_20220911034207.jpeg",
+        "thumbnail_url": "https://thespacedevs-dev.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305191004.jpeg",
+        "credit": null,
+        "license": {
+          "id": 1,
+          "name": "Unknown",
+          "priority": 9,
+          "link": null
+        },
+        "single_use": true,
+        "variants": []
+      },
+      "response_mode": "list",
+      "type": {
+        "id": 2,
+        "name": "Government"
+      },
+      "in_space": false,
+      "time_in_space": "P203DT12H28M8S",
+      "eva_time": "PT6H29M",
+      "age": 56,
+      "date_of_birth": "1970-01-06",
+      "date_of_death": null,
+      "nationality": [
+        {
+          "id": 26,
+          "name": "Canada",
+          "alpha_2_code": "CA",
+          "alpha_3_code": "CAN",
+          "nationality_name": "Canadian",
+          "nationality_name_composed": "Canado"
+        }
+      ],
+      "bio": "David Saint-Jacques is a Canadian astronaut with the Canadian Space Agency (CSA).\r\nHe was also an engineer, an astrophysicist, and a physician prior to joining the CSA.\r\nHe was selected to join the CSA in the 2009 CSA selection along with Jeremy Hansen.",
+      "wiki": "https://en.wikipedia.org/wiki/David_Saint-Jacques",
+      "last_flight": "2018-12-03T11:31:52Z",
+      "first_flight": "2018-12-03T11:31:52Z",
+      "social_media_links": [
+        {
+          "id": 210,
+          "social_media": {
+            "id": 1,
+            "name": "X",
+            "url": "https://x.com",
+            "logo": {
+              "id": 2320,
+              "name": "X logo",
+              "image_url": "https://thespacedevs-dev.nyc3.digitaloceanspaces.com/media/images/x_logo_image_20250211191027.jpg",
+              "thumbnail_url": "https://thespacedevs-dev.nyc3.digitaloceanspaces.com/media/images/x_logo_image_thumbnail_20250211191027.jpeg",
+              "credit": "X",
+              "license": {
+                "id": 1,
+                "name": "Unknown",
+                "priority": 9,
+                "link": null
+              },
+              "single_use": true,
+              "variants": []
+            }
+          },
+          "url": "https://twitter.com/Astro_DavidS"
+        },
+        {
+          "id": 211,
+          "social_media": {
+            "id": 2,
+            "name": "Instagram",
+            "url": "https://instagram.com",
+            "logo": {
+              "id": 2322,
+              "name": "Instagram logo",
+              "image_url": "https://thespacedevs-dev.nyc3.digitaloceanspaces.com/media/images/instagram_logo_image_20250211191139.png",
+              "thumbnail_url": "https://thespacedevs-dev.nyc3.digitaloceanspaces.com/media/images/instagram_logo_image_thumbnail_20250211191139.png",
+              "credit": "Instagram",
+              "license": {
+                "id": 1,
+                "name": "Unknown",
+                "priority": 9,
+                "link": null
+              },
+              "single_use": true,
+              "variants": []
+            }
+          },
+          "url": "https://www.instagram.com/astrodavids/"
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "url": "https://lldev.thespacedevs.com/2.3.0/astronauts/80/",
+      "name": "Roberta Bondar",
+      "status": {
+        "id": 2,
+        "name": "Retired"
+      },
+      "agency": {
+        "response_mode": "list",
+        "id": 16,
+        "url": "https://lldev.thespacedevs.com/2.3.0/agencies/16/",
+        "name": "Canadian Space Agency",
+        "abbrev": "CSA",
+        "type": {
+          "id": 1,
+          "name": "Government"
+        }
+      },
+      "image": {
+        "id": 458,
+        "name": "[AUTO] Roberta Bondar - image",
+        "image_url": "https://thespacedevs-dev.nyc3.digitaloceanspaces.com/media/images/roberta2520bondar_image_20181128223453.jpg",
+        "thumbnail_url": "https://thespacedevs-dev.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305185914.jpeg",
+        "credit": null,
+        "license": {
+          "id": 1,
+          "name": "Unknown",
+          "priority": 9,
+          "link": null
+        },
+        "single_use": true,
+        "variants": []
+      },
+      "response_mode": "list",
+      "type": {
+        "id": 2,
+        "name": "Government"
+      },
+      "in_space": false,
+      "time_in_space": "P8DT1H14M27S",
+      "eva_time": "P0D",
+      "age": 80,
+      "date_of_birth": "1945-12-04",
+      "date_of_death": null,
+      "nationality": [
+        {
+          "id": 26,
+          "name": "Canada",
+          "alpha_2_code": "CA",
+          "alpha_3_code": "CAN",
+          "nationality_name": "Canadian",
+          "nationality_name_composed": "Canado"
+        }
+      ],
+      "bio": "Roberta Bondar (born December 4, 1945) is Canada's first female astronaut and the first neurologist in space. Following more than a decade as NASA's head of space medicine, Bondar became a consultant and speaker in the business, scientific, and medical communities.\r\n\r\nBondar has received many honours including the Order of Canada, the Order of Ontario, the NASA Space Medal, over 22 honorary degrees and induction into the Canadian Medical Hall of Fame.",
+      "wiki": "https://en.wikipedia.org/wiki/Roberta_Bondar",
+      "last_flight": "1992-01-22T14:52:33Z",
+      "first_flight": "1992-01-22T14:52:33Z",
+      "social_media_links": []
+    },
+    {
+      "id": 112,
+      "url": "https://lldev.thespacedevs.com/2.3.0/astronauts/112/",
+      "name": "Marc Garneau",
+      "status": {
+        "id": 11,
+        "name": "Deceased"
+      },
+      "agency": {
+        "response_mode": "list",
+        "id": 16,
+        "url": "https://lldev.thespacedevs.com/2.3.0/agencies/16/",
+        "name": "Canadian Space Agency",
+        "abbrev": "CSA",
+        "type": {
+          "id": 1,
+          "name": "Government"
+        }
+      },
+      "image": {
+        "id": 898,
+        "name": "[AUTO] Marc Garneau - image",
+        "image_url": "https://thespacedevs-dev.nyc3.digitaloceanspaces.com/media/images/marc2520garneau_image_20181128232810.jpg",
+        "thumbnail_url": "https://thespacedevs-dev.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305191059.jpeg",
+        "credit": null,
+        "license": {
+          "id": 1,
+          "name": "Unknown",
+          "priority": 9,
+          "link": null
+        },
+        "single_use": true,
+        "variants": []
+      },
+      "response_mode": "list",
+      "type": {
+        "id": 2,
+        "name": "Government"
+      },
+      "in_space": false,
+      "time_in_space": "P29DT1H59M59S",
+      "eva_time": "P0D",
+      "age": 76,
+      "date_of_birth": "1949-02-23",
+      "date_of_death": "2025-06-04",
+      "nationality": [
+        {
+          "id": 26,
+          "name": "Canada",
+          "alpha_2_code": "CA",
+          "alpha_3_code": "CAN",
+          "nationality_name": "Canadian",
+          "nationality_name_composed": "Canado"
+        }
+      ],
+      "bio": "Garneau was one of the first Canadian Astronauts and he became the first Canadian in outer space in October 1984. In 1984, he was seconded to the new Canadian Astronaut Program (CAP), one of six chosen from over 4,000 applicants. He flew on the shuttle Challenger, STS-41-G from October 5 to 13, 1984, as payload specialist. He was promoted to Captain in 1986, and left the Navy in 1989, to become deputy director of the CAP. In 1992–93, he underwent further training to become a mission specialist. He worked as CAPCOM for a number of shuttle flights and was on two further flights himself: STS-77 (May 19 to 29, 1996) and STS-97 (to the ISS, November 30 to December 11, 2000). He has logged over 677 hours in space.\r\n\r\nIn February 2001, he was appointed executive vice-president of the Canadian Space Agency, and became its president on November 22, 2001.",
+      "wiki": "https://en.wikipedia.org/wiki/Marc_Garneau",
+      "last_flight": "2000-12-01T03:06:01Z",
+      "first_flight": "1984-10-05T11:03:00Z",
+      "social_media_links": []
+    },
+    {
+      "id": 125,
+      "url": "https://lldev.thespacedevs.com/2.3.0/astronauts/125/",
+      "name": "Jeremy Hansen",
+      "status": {
+        "id": 1,
+        "name": "Active"
+      },
+      "agency": {
+        "response_mode": "list",
+        "id": 16,
+        "url": "https://lldev.thespacedevs.com/2.3.0/agencies/16/",
+        "name": "Canadian Space Agency",
+        "abbrev": "CSA",
+        "type": {
+          "id": 1,
+          "name": "Government"
+        }
+      },
+      "image": {
+        "id": 700,
+        "name": "[AUTO] Jeremy Hansen - image",
+        "image_url": "https://thespacedevs-dev.nyc3.digitaloceanspaces.com/media/images/jeremy2520hansen_image_20181129202847.jpg",
+        "thumbnail_url": "https://thespacedevs-dev.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305190535.jpeg",
+        "credit": null,
+        "license": {
+          "id": 1,
+          "name": "Unknown",
+          "priority": 9,
+          "link": null
+        },
+        "single_use": true,
+        "variants": []
+      },
+      "response_mode": "list",
+      "type": {
+        "id": 2,
+        "name": "Government"
+      },
+      "in_space": false,
+      "time_in_space": "P0D",
+      "eva_time": "P0D",
+      "age": 50,
+      "date_of_birth": "1976-01-27",
+      "date_of_death": null,
+      "nationality": [
+        {
+          "id": 26,
+          "name": "Canada",
+          "alpha_2_code": "CA",
+          "alpha_3_code": "CAN",
+          "nationality_name": "Canadian",
+          "nationality_name_composed": "Canado"
+        }
+      ],
+      "bio": "Jeremy Roger Hansen  is a Canadian astronaut with the Canadian Space Agency (CSA). He was selected to join the CSA in the 2009 CSA selection.",
+      "wiki": "https://en.wikipedia.org/wiki/Jeremy_Hansen",
+      "last_flight": null,
+      "first_flight": null,
+      "social_media_links": [
+        {
+          "id": 197,
+          "social_media": {
+            "id": 1,
+            "name": "X",
+            "url": "https://x.com",
+            "logo": {
+              "id": 2320,
+              "name": "X logo",
+              "image_url": "https://thespacedevs-dev.nyc3.digitaloceanspaces.com/media/images/x_logo_image_20250211191027.jpg",
+              "thumbnail_url": "https://thespacedevs-dev.nyc3.digitaloceanspaces.com/media/images/x_logo_image_thumbnail_20250211191027.jpeg",
+              "credit": "X",
+              "license": {
+                "id": 1,
+                "name": "Unknown",
+                "priority": 9,
+                "link": null
+              },
+              "single_use": true,
+              "variants": []
+            }
+          },
+          "url": "https://twitter.com/Astro_Jeremy"
+        }
+      ]
+    },
+    {
+      "id": 188,
+      "url": "https://lldev.thespacedevs.com/2.3.0/astronauts/188/",
+      "name": "Steve MacLean",
+      "status": {
+        "id": 2,
+        "name": "Retired"
+      },
+      "agency": {
+        "response_mode": "list",
+        "id": 16,
+        "url": "https://lldev.thespacedevs.com/2.3.0/agencies/16/",
+        "name": "Canadian Space Agency",
+        "abbrev": "CSA",
+        "type": {
+          "id": 1,
+          "name": "Government"
+        }
+      },
+      "image": {
+        "id": 235,
+        "name": "[AUTO] Steve MacLean - image",
+        "image_url": "https://thespacedevs-dev.nyc3.digitaloceanspaces.com/media/images/steve2520maclean_image_20181201174100.jpg",
+        "thumbnail_url": "https://thespacedevs-dev.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305185306.jpeg",
+        "credit": null,
+        "license": {
+          "id": 1,
+          "name": "Unknown",
+          "priority": 9,
+          "link": null
+        },
+        "single_use": true,
+        "variants": []
+      },
+      "response_mode": "list",
+      "type": {
+        "id": 2,
+        "name": "Government"
+      },
+      "in_space": false,
+      "time_in_space": "P21DT16H1M25S",
+      "eva_time": "PT7H11M",
+      "age": 71,
+      "date_of_birth": "1954-12-14",
+      "date_of_death": null,
+      "nationality": [
+        {
+          "id": 26,
+          "name": "Canada",
+          "alpha_2_code": "CA",
+          "alpha_3_code": "CAN",
+          "nationality_name": "Canadian",
+          "nationality_name_composed": "Canado"
+        }
+      ],
+      "bio": "Steven Glenwood MacLean FRCGS (born December 14, 1954) is a Canadian astronaut.\r\nMacLean served as a Mission Specialist on STS-115, which launched on September 9, 2006, and returned on September 21, 2006. He became the first Canadian to operate the robotic arm Canadarm2. On September 13, he performed his first spacewalk, a 7-hour EVA to activate the solar panels on the P3/4 truss – the second Canadian to do so, after Chris Hadfield.",
+      "wiki": "https://en.wikipedia.org/wiki/Steve_MacLean_(astronaut)",
+      "last_flight": "2006-09-09T15:14:55Z",
+      "first_flight": "1992-10-22T17:09:40Z",
+      "social_media_links": []
+    },
+    {
+      "id": 220,
+      "url": "https://lldev.thespacedevs.com/2.3.0/astronauts/220/",
+      "name": "Julie Payette",
+      "status": {
+        "id": 2,
+        "name": "Retired"
+      },
+      "agency": {
+        "response_mode": "list",
+        "id": 16,
+        "url": "https://lldev.thespacedevs.com/2.3.0/agencies/16/",
+        "name": "Canadian Space Agency",
+        "abbrev": "CSA",
+        "type": {
+          "id": 1,
+          "name": "Government"
+        }
+      },
+      "image": {
+        "id": 772,
+        "name": "[AUTO] Julie Payette - image",
+        "image_url": "https://thespacedevs-dev.nyc3.digitaloceanspaces.com/media/images/julie_payette_image_20220122091651.jpeg",
+        "thumbnail_url": "https://thespacedevs-dev.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305190735.jpeg",
+        "credit": null,
+        "license": {
+          "id": 1,
+          "name": "Unknown",
+          "priority": 9,
+          "link": null
+        },
+        "single_use": true,
+        "variants": []
+      },
+      "response_mode": "list",
+      "type": {
+        "id": 2,
+        "name": "Government"
+      },
+      "in_space": false,
+      "time_in_space": "P25DT11H57M8S",
+      "eva_time": "P0D",
+      "age": 62,
+      "date_of_birth": "1963-10-20",
+      "date_of_death": null,
+      "nationality": [
+        {
+          "id": 26,
+          "name": "Canada",
+          "alpha_2_code": "CA",
+          "alpha_3_code": "CAN",
+          "nationality_name": "Canadian",
+          "nationality_name_composed": "Canado"
+        }
+      ],
+      "bio": "Julie Payette CC CMM COM CQ CD (born October 20, 1963) is the current Governor General of Canada, the 29th since Canadian Confederation. Before assuming office, she was a businesswoman, former member of the Canadian Astronaut Corps, and engineer. Payette has completed two spaceflights, STS-96 and STS-127, logging more than 25 days in space. She served as chief astronaut for the Canadian Space Agency (CSA), and has served as capsule communicator at NASA Mission Control Center in Houston.",
+      "wiki": "https://en.wikipedia.org/wiki/Julie_Payette",
+      "last_flight": "2009-07-15T22:03:10Z",
+      "first_flight": "1999-05-27T10:49:42Z",
+      "social_media_links": [
+        {
+          "id": 171,
+          "social_media": {
+            "id": 1,
+            "name": "X",
+            "url": "https://x.com",
+            "logo": {
+              "id": 2320,
+              "name": "X logo",
+              "image_url": "https://thespacedevs-dev.nyc3.digitaloceanspaces.com/media/images/x_logo_image_20250211191027.jpg",
+              "thumbnail_url": "https://thespacedevs-dev.nyc3.digitaloceanspaces.com/media/images/x_logo_image_thumbnail_20250211191027.jpeg",
+              "credit": "X",
+              "license": {
+                "id": 1,
+                "name": "Unknown",
+                "priority": 9,
+                "link": null
+              },
+              "single_use": true,
+              "variants": []
+            }
+          },
+          "url": "https://twitter.com/Astro_Payette"
+        }
+      ]
+    },
+    {
+      "id": 265,
+      "url": "https://lldev.thespacedevs.com/2.3.0/astronauts/265/",
+      "name": "Robert Thirsk",
+      "status": {
+        "id": 2,
+        "name": "Retired"
+      },
+      "agency": {
+        "response_mode": "list",
+        "id": 16,
+        "url": "https://lldev.thespacedevs.com/2.3.0/agencies/16/",
+        "name": "Canadian Space Agency",
+        "abbrev": "CSA",
+        "type": {
+          "id": 1,
+          "name": "Government"
+        }
+      },
+      "image": {
+        "id": 471,
+        "name": "[AUTO] Robert Thirsk - image",
+        "image_url": "https://thespacedevs-dev.nyc3.digitaloceanspaces.com/media/images/robert2520thirsk_image_20181201222354.jpg",
+        "thumbnail_url": "https://thespacedevs-dev.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305185935.jpeg",
+        "credit": null,
+        "license": {
+          "id": 1,
+          "name": "Unknown",
+          "priority": 9,
+          "link": null
+        },
+        "single_use": true,
+        "variants": []
+      },
+      "response_mode": "list",
+      "type": {
+        "id": 2,
+        "name": "Government"
+      },
+      "in_space": false,
+      "time_in_space": "P204DT18H30M7S",
+      "eva_time": "P0D",
+      "age": 72,
+      "date_of_birth": "1953-08-17",
+      "date_of_death": null,
+      "nationality": [
+        {
+          "id": 26,
+          "name": "Canada",
+          "alpha_2_code": "CA",
+          "alpha_3_code": "CAN",
+          "nationality_name": "Canadian",
+          "nationality_name_composed": "Canado"
+        }
+      ],
+      "bio": "Robert Brent Thirsk, OC OBC (born August 17, 1953) is a Canadian engineer and physician, and a former Canadian Space Agency astronaut. He holds the Canadian records for the longest space flight (187 days 20 hours) and the most time spent in space (204 days 18 hours).",
+      "wiki": "https://en.wikipedia.org/wiki/Robert_Thirsk",
+      "last_flight": "2009-05-27T10:34:53Z",
+      "first_flight": "1996-06-20T14:49:00Z",
+      "social_media_links": []
+    },
+    {
+      "id": 271,
+      "url": "https://lldev.thespacedevs.com/2.3.0/astronauts/271/",
+      "name": "Bjarni Tryggvason",
+      "status": {
+        "id": 11,
+        "name": "Deceased"
+      },
+      "agency": {
+        "response_mode": "list",
+        "id": 16,
+        "url": "https://lldev.thespacedevs.com/2.3.0/agencies/16/",
+        "name": "Canadian Space Agency",
+        "abbrev": "CSA",
+        "type": {
+          "id": 1,
+          "name": "Government"
+        }
+      },
+      "image": {
+        "id": 773,
+        "name": "[AUTO] Bjarni Tryggvason - image",
+        "image_url": "https://thespacedevs-dev.nyc3.digitaloceanspaces.com/media/images/bjarni2520tryggvason_image_20181201223221.jpg",
+        "thumbnail_url": "https://thespacedevs-dev.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305190736.jpeg",
+        "credit": null,
+        "license": {
+          "id": 1,
+          "name": "Unknown",
+          "priority": 9,
+          "link": null
+        },
+        "single_use": true,
+        "variants": []
+      },
+      "response_mode": "list",
+      "type": {
+        "id": 2,
+        "name": "Government"
+      },
+      "in_space": false,
+      "time_in_space": "P11DT20H27M",
+      "eva_time": "P0D",
+      "age": 76,
+      "date_of_birth": "1945-09-21",
+      "date_of_death": "2022-04-06",
+      "nationality": [
+        {
+          "id": 26,
+          "name": "Canada",
+          "alpha_2_code": "CA",
+          "alpha_3_code": "CAN",
+          "nationality_name": "Canadian",
+          "nationality_name_composed": "Canado"
+        }
+      ],
+      "bio": "Bjarni Valdimar Tryggvason (born September 21, 1945) is an Icelandic-born Canadian engineer and a former NRC/CSA astronaut. He served as a Payload Specialist on Space Shuttle mission STS-85 in 1997, a 12-day mission to study changes in the Earth's atmosphere.",
+      "wiki": "https://en.wikipedia.org/wiki/Bjarni_Tryggvason",
+      "last_flight": "1997-08-07T14:41:00Z",
+      "first_flight": "1997-08-07T14:41:00Z",
+      "social_media_links": []
+    },
+    {
+      "id": 288,
+      "url": "https://lldev.thespacedevs.com/2.3.0/astronauts/288/",
+      "name": "Dafydd Williams",
+      "status": {
+        "id": 2,
+        "name": "Retired"
+      },
+      "agency": {
+        "response_mode": "list",
+        "id": 16,
+        "url": "https://lldev.thespacedevs.com/2.3.0/agencies/16/",
+        "name": "Canadian Space Agency",
+        "abbrev": "CSA",
+        "type": {
+          "id": 1,
+          "name": "Government"
+        }
+      },
+      "image": {
+        "id": 323,
+        "name": "[AUTO] Dafydd Williams - image",
+        "image_url": "https://thespacedevs-dev.nyc3.digitaloceanspaces.com/media/images/dafydd2520williams_image_20181201225440.jpg",
+        "thumbnail_url": "https://thespacedevs-dev.nyc3.digitaloceanspaces.com/media/images/255bauto255d__image_thumbnail_20240305185541.jpeg",
+        "credit": null,
+        "license": {
+          "id": 1,
+          "name": "Unknown",
+          "priority": 9,
+          "link": null
+        },
+        "single_use": true,
+        "variants": []
+      },
+      "response_mode": "list",
+      "type": {
+        "id": 2,
+        "name": "Government"
+      },
+      "in_space": false,
+      "time_in_space": "P28DT15H46M18S",
+      "eva_time": "PT17H30M",
+      "age": 71,
+      "date_of_birth": "1954-05-16",
+      "date_of_death": null,
+      "nationality": [
+        {
+          "id": 26,
+          "name": "Canada",
+          "alpha_2_code": "CA",
+          "alpha_3_code": "CAN",
+          "nationality_name": "Canadian",
+          "nationality_name_composed": "Canado"
+        }
+      ],
+      "bio": "Dafydd Rhys \"Dave\" Williams OC (born May 16, 1954) is a Canadian physician, public speaker and a retired CSA astronaut. Williams was a mission specialist on two space shuttle missions. His first spaceflight, STS-90 in 1998, was a 16-day mission aboard Space Shuttle Columbia dedicated to neuroscience research. His second flight, STS-118 in August 2007, was flown by Space Shuttle Endeavour to the International Space Station. During that mission he performed three spacewalks, becoming the third Canadian to perform a spacewalk and setting a Canadian record for total number of spacewalks. These spacewalks combined for a total duration of 17 hours and 47 minutes.",
+      "wiki": "https://en.wikipedia.org/wiki/Dafydd_Williams",
+      "last_flight": "2007-08-08T22:36:42Z",
+      "first_flight": "1998-04-17T18:19:00Z",
+      "social_media_links": []
+    }
+  ]
+}
