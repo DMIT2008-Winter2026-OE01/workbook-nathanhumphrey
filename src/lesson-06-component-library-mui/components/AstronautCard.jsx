@@ -1,3 +1,15 @@
+/*
+Update the following using MUI components. The following will be helpful:
+
+- https://mui.com/material-ui/react-box/
+- https://mui.com/material-ui/react-card/
+- https://mui.com/material-ui/api/card-content/
+- https://mui.com/material-ui/react-chip/
+- https://mui.com/material-ui/react-stack/
+- https://mui.com/material-ui/icons/
+
+*/
+
 export default function AstronautCard(
   { astronaut },
 ) {
