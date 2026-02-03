@@ -1,17 +1,29 @@
 import AstronautCard from './AstronautCard';
+import List from '@mui/material/List';
+import Typography from '@mui/material/Typography';
 
 export default function AstronautList({ astronauts }) {
   return (
     <>
-      <h2 className="text-xl font-semibold text-sky-600 mb-4">Canadian Astronauts</h2>
-      <ul className="list-group">
+      <Typography
+        component="h2"
+        variant="h5"
+        sx={{ color: 'primary.main', fontWeight: 600, mb: 2 }}
+      >
+        Canadian Astronauts
+      </Typography>
+
+      <List
+        disablePadding
+        sx={{ listStyle: 'none' }}
+      >
         {astronauts.map((astronaut) => (
           <AstronautCard
             key={astronaut.id}
             astronaut={astronaut}
           />
         ))}
-      </ul>
+      </List>
     </>
   );
 }
