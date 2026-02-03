@@ -1,3 +1,119 @@
+# Lesson 06 - MUI
+
+
+Check the docs at: https://mui.com/material-ui/getting-started/
+
+## Install MUI and related packages
+
+```sh
+npm install @mui/material @emotion/react @emotion/styled
+npm install @fontsource/roboto
+npm install @mui/icons-material
+```
+
+Configure the project to use MUI instead of Tailwindcss
+
+```jsx
+// pages/_app.jsx
+
+// The following is no longer needed, comment or remove
+// import "@/styles/globals.css";
+import CssBaseline from '@mui/material/CssBaseline';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+
+export default function App({ Component, pageProps }) {
+  return <>
+    <CssBaseline />
+    <Component {...pageProps} />;
+  </>
+}
+```
+
+At this point, your app will still render, but it will have lost all its styling. Now it's time to rebuild the components using MUI. Let's start with the home page.
+
+### Home Page `pages/index.jsx`
+
+```jsx
+import AstronautList from '@/components/AstronautList';
+import data from '@/data/astronauts.json';
+// MUI Components
+import Container from '@mui/material/Container';
+import Divider from '@mui/material/Divider';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+
+export default function Home() {
+  return (
+    <Container maxWidth="md" sx={{ py: 4 }}>
+      <Grid container spacing={3}>
+        <Grid size={12}>
+          <Typography
+            component="h1"
+            variant="h4"
+            sx={{ color: 'primary.main', fontWeight: 700, mb: 2 }}
+          >
+            Lesson 06 - Intro to Component Libraries: MUI
+          </Typography>
+          <Divider sx={{ borderColor: 'primary.main', borderBottomWidth: 2 }} />
+        </Grid>
+
+        <Grid size={12}>
+          <AstronautList astronauts={data.astronauts} />
+        </Grid>
+      </Grid>
+    </Container>
+  );
+}
+```
+
+**Relevant Links**
+- https://mui.com/material-ui/react-container/
+- https://mui.com/material-ui/react-grid/
+- https://mui.com/material-ui/react-typography/
+- https://mui.com/material-ui/react-divider/
+
+### Astronaut List Component `components/AstronautList.jsx`
+
+```jsx
+import AstronautCard from './AstronautCard';
+import List from '@mui/material/List';
+import Typography from '@mui/material/Typography';
+
+export default function AstronautList({ astronauts }) {
+  return (
+    <>
+      <Typography
+        component="h2"
+        variant="h5"
+        sx={{ color: 'primary.main', fontWeight: 600, mb: 2 }}
+      >
+        Canadian Astronauts
+      </Typography>
+
+      <List
+        disablePadding
+        sx={{ listStyle: 'none' }}
+      >
+        {astronauts.map((astronaut) => (
+          <AstronautCard
+            key={astronaut.id}
+            astronaut={astronaut}
+          />
+        ))}
+      </List>
+    </>
+  );
+}
+```
+
+**Relevant Links**
+- https://mui.com/material-ui/react-list/
+
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
 ## Getting Started
