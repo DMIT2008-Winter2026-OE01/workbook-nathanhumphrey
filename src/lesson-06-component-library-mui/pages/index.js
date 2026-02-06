@@ -13,10 +13,10 @@ export default function Home() {
           <Typography
             variant="h4"
             component="h1"
-            sx={{color: "primary.main", fontWeight: 700, mb: 2 }}>
+            sx={{color: "primary.dark", fontWeight: 700, mb: 2 }}>
             Lesson 06 - Intro to Component Libraries: MUI
           </Typography>
-          <Divider sx={{borderColor: "primary.main", borderBottomWidth: 3}} />
+          <Divider sx={{borderColor: "primary.dark", borderBottomWidth: 3}} />
         </Grid>
       </Grid>
       <Grid size={12}>

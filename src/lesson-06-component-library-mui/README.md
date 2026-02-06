@@ -215,6 +215,65 @@ export default function AstronautCard(
 
 ---
 
+# Lesson 07 - MUI Theme
+
+Check the docs at: https://mui.com/material-ui/customization/theming/
+
+## Configure Your Theme
+
+```js
+// util/theme/config.js
+import { createTheme } from '@mui/material'
+
+const themeOptions = {
+  palette: {
+    primary: {
+      light: '#e87575',
+      main: '#b23131',
+      dark: '#840000',
+      contrastText: '#fff',
+    },
+    secondary: {
+      light: '#618eff',
+      main: '#364ff4',
+      dark: '#0013ba',
+      contrastText: '#000',
+    },
+  },
+};
+
+export const theme = createTheme(themeOptions);
+```
+
+## Make Theme Available to Your App
+
+Import your `theme` and `ThemeProvider`. The `ThemeProvider` does exactly what it sounds like: provides access to the theme.
+
+```jsx
+// pages/_app.js
+import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider } from '@mui/material';
+import { theme } from '@/util/theme/config.js'
+
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+
+export default function App({ Component, pageProps }) {
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
+}
+```
+
+You should see the effects of your theme changes already being applied. Have some fun making theme updates and changes to see what you can do with your demo app.
+
+---
+
 # Next.js Project Skeleton
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).

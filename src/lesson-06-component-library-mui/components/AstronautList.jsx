@@ -8,7 +8,7 @@ export default function AstronautList({ astronauts }) {
       <Typography
         component="h2"
         variant="h5"
-        sx={{ color: 'primary.main', fontWeight: 600, mb: 2 }}
+        sx={{ color: 'secondary.main', fontWeight: 600, mb: 2 }}
       >
         Canadian Astronauts
       </Typography>
