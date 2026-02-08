@@ -1,4 +1,4 @@
-# Lesson 08 - React Events and State Fundamentals [ToDo List]
+# Lesson 07 - React Events and State Fundamentals [ToDo List]
 
 ## Why?
 
