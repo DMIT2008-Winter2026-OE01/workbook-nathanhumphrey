@@ -260,3 +260,7 @@ Update the example with the following features:
   - Requires event listener and state updates
 - Update the list heading so that it reflects the number of items currently in the list:
   - Requires conditional rendering
+- Add input validation
+  - Ensure that a new Todo item cannot be blank
+  - Use state to store the current status of adding a Todo
+  - Use the [Snackbar](https://mui.com/material-ui/react-snackbar/) component to render both error and success messages.
