@@ -1,4 +1,4 @@
-# Lesson 06 - MUI
+# Lesson 06 - MUI Component Library
 
 
 Check the docs at: https://mui.com/material-ui/getting-started/
@@ -215,7 +215,7 @@ export default function AstronautCard(
 
 ---
 
-# Lesson 07 - MUI Theme
+# Lesson 06 - MUI Theme Development
 
 Check the docs at: https://mui.com/material-ui/customization/theming/
 
