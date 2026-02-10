@@ -40,7 +40,6 @@ State is what makes React so powerful, it's a great way of keeping in sync what 
     - add a container ([docs here](https://mui.com/material-ui/react-container/))
       ```jsx
       // pages/index.js
-      import TodoList from '@/components/TodoList';
       import { Container, Typography } from '@mui/material';
 
       export default function Home() {
