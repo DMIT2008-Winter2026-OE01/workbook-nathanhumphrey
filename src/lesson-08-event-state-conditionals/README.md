@@ -1,4 +1,4 @@
-# React Events and State - JSX Conditionals
+# Lesson 08 - React Events and State - JSX Conditionals
 
 Sometimes, we will want to show something conditionally in your UI. This is a critical part of using state in React components.
 
