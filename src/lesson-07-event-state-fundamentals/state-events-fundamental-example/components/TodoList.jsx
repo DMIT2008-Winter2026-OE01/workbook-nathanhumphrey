@@ -22,6 +22,11 @@ export default function TodoList() {
     setTodoText('');
   };
 
+  const handleRemoveTodo = (removeIndex) => {
+    const filteredTodos = allTodos.filter((_, index) => index !== removeIndex);
+    setAllTodos(filteredTodos);
+  };
+
   return (
     <Box sx={{ mt: 4 }}>
       <form onSubmit={addTodoToList}>
@@ -52,10 +57,6 @@ export default function TodoList() {
           </Grid>
         </Grid>
       </form>
-      <Grid size={12}>
-        Current input text: {todoText}<br />
-        Current TodoList: {allTodos.toString()}
-      </Grid>
       {/* display the todos */}
       <Grid container spacing={2}>
         <Grid size={10}>
@@ -63,9 +64,22 @@ export default function TodoList() {
             {allTodos.map((todoItem, index) => {
               return <ListItem key={index} divider sx={{ paddingLeft: 0 }}>
                 <ListItemText>
-                  <Typography>
-                    {todoItem}
-                  </Typography>
+                  <Grid container spacing={2} alignItems="center">
+                    <Grid size={8}>
+                      <Typography>
+                        {todoItem}
+                      </Typography>
+                    </Grid>
+                    <Grid size={4} sx={{ textAlign: 'right' }}>
+                      <Button
+                        variant="outlined"
+                        color="error"
+                        onClick={() => handleRemoveTodo(index)}
+                      >
+                        Remove
+                      </Button>
+                    </Grid>
+                  </Grid>
                 </ListItemText>
               </ListItem>;
             })}
