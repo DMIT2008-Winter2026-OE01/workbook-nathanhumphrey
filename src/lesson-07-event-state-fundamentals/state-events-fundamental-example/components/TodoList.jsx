@@ -28,7 +28,7 @@ export default function TodoList() {
         <Grid container spacing={2}>
           <Grid size={12}>
             <Typography component="h2" variant={'h4'}>
-              Nothing Todo
+              {allTodos.length === 0 ? 'Nothing Todo' : `${allTodos.length} Thing${allTodos.length > 1 ? 's' : ''} Todo`}
             </Typography>
           </Grid>
 
