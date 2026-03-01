@@ -40,8 +40,8 @@ You'll see that the response body returns something like this.
    - Right under where the `Home` function is declared, add the stateful variable as follows (remember we're creating an object with two key value pairs)
       ```js
         const [quoteData, setQuoteData] = useState({
-          quote: "Quote here.",
-          author: "Author here"
+          quote: 'Quote here.',
+          author: 'Author here'
         });
       ```
       > Note: As a review of state, state can contain any type of data structure. Here, we're using a JS object.
@@ -67,7 +67,7 @@ You'll see that the response body returns something like this.
         const handleClick = () => {
           setQuoteData({
             quote: "I'm starting to enjoy JavaScript, but don't tell anyone",
-            author: "Myself"
+            author: 'Myself'
           });
         }
       ```
@@ -84,21 +84,22 @@ You'll see that the response body returns something like this.
 5. Let's hook up the quote api with our project.
    - Under the function definition for Home, create a const that will have the URL.
       ```js
-      const RANDOM_QUOTE_URL = 'https://api.quotable.io/random'
+      const RANDOM_QUOTE_URL = 'https://api.quotable.io/random';
       ```
    - Change `handleClick` function so that we fetch the URL and, with the result, use the `setQuoteData` function to change the values.
       ```js
         const handleClick = () => {
           fetch(RANDOM_QUOTE_URL)
-            .then((response)=> {
-              return response.json()
-            }).then((data)=> {
+            .then((response) => {
+              return response.json();
+            })
+            .then((data) => {
               setQuoteData({
                 quote: data.content,
-                author: data.author
-              })
+                author: data.author,
+              });
             });
-        }
+        };
       ```
       > Note: You might be thinking "how did we find the `data.content` and `data.author`?", we found this from looking at the documentation and using our REST API client in step 1.
 
