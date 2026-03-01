@@ -1,4 +1,4 @@
-# React, Rest and State
+# React, Rest, and State
 
 # Why?
 
