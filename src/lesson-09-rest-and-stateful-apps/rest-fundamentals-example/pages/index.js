@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import Head from 'next/head';
 
 import AppBar from '@mui/material/AppBar';
@@ -10,6 +12,26 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
 export default function Home() {
+  const RANDOM_QUOTE_URL = 'https://api.quotable.io/random';
+
+  const [quoteData, setQuoteData] = useState({
+    quote: 'Default Quote',
+    author: 'Default Author',
+  });
+
+  const handleClick = () => {
+    fetch(RANDOM_QUOTE_URL)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setQuoteData({
+          quote: data.content,
+          author: data.author,
+        });
+      });
+  };
+
   return (
     <div>
       <Head>
@@ -43,7 +65,7 @@ export default function Home() {
               color="text.primary"
               paragraph
             >
-              Quote here.
+              {quoteData.quote}
             </Typography>
             <Typography
               component="h1"
@@ -52,10 +74,12 @@ export default function Home() {
               color="text.secondary"
               gutterBottom
             >
-              Author here
+              {quoteData.author}
             </Typography>
             <Box display="flex" justifyContent="center">
-              <Button variant="contained">Get New Quote</Button>
+              <Button onClick={handleClick} variant="contained">
+                Get New Quote
+              </Button>
             </Box>
           </Box>
         </Container>
