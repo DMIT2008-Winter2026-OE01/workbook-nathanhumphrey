@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import Head from 'next/head';
 
 import AppBar from '@mui/material/AppBar';
@@ -22,13 +24,27 @@ import Typography from '@mui/material/Typography';
 import AdaptationReviewCard from '../components/AdaptationReviewCard';
 
 export default function Home() {
-  const MOCK_ADAPTATION_RATING = [
-    {
-      title: 'Fight Club',
-      comment: 'Great movie and book',
-      rating: 10,
-    },
-  ];
+  const [reviews, setReviews] = useState([]);
+
+  // // TODO: remove the following
+  // const MOCK_ADAPTATION_RATING = [
+  //   {
+  //     title: 'Fight Club',
+  //     comment: 'Great movie and book',
+  //     rating: 10,
+  //   },
+  // ];
+
+  const loadAllReviewsButton = () => {
+    fetch(`http://localhost:5000/reviews`)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setReviews(data);
+      });
+  };
+
   return (
     <div>
       <Head>
@@ -103,9 +119,11 @@ export default function Home() {
               pb: 2,
             }}
           >
-            <Button variant="contained">Load All Current Reviews</Button>
+            <Button onClick={loadAllReviewsButton} variant="contained">
+              Load All Current Reviews
+            </Button>
           </Box>
-          {MOCK_ADAPTATION_RATING.map((adaptation, index) => {
+          {reviews.map((adaptation, index) => {
             return (
               <AdaptationReviewCard
                 key={index}
