@@ -25,15 +25,31 @@ import AdaptationReviewCard from '../components/AdaptationReviewCard';
 
 export default function Home() {
   const [reviews, setReviews] = useState([]);
+  const [title, setTitle] = useState('');
+  const [comments, setComments] = useState('');
+  const [rating, setRating] = useState(0);
 
-  // // TODO: remove the following
-  // const MOCK_ADAPTATION_RATING = [
-  //   {
-  //     title: 'Fight Club',
-  //     comment: 'Great movie and book',
-  //     rating: 10,
-  //   },
-  // ];
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    fetch(`http://localhost:5000/reviews`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        title,
+        comment: comments,
+        rating,
+      }),
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        reviews.push(data);
+        setReviews([data, ...reviews]);
+      });
+  };
 
   const loadAllReviewsButton = () => {
     fetch(`http://localhost:5000/reviews`)
@@ -61,7 +77,7 @@ export default function Home() {
       </AppBar>
       <main>
         <Container maxWidth="md">
-          <form>
+          <form onSubmit={handleSubmit}>
             <Grid container spacing={3}>
               <Grid item xs={12} sm={12}>
                 <TextField
@@ -70,6 +86,10 @@ export default function Home() {
                   label="Adaptation Title"
                   fullWidth
                   variant="standard"
+                  value={title}
+                  onChange={(event) => {
+                    setTitle(event.target.value);
+                  }}
                 />
               </Grid>
               <Grid item xs={12} sm={12}>
@@ -79,6 +99,10 @@ export default function Home() {
                   label="Comments"
                   fullWidth
                   variant="standard"
+                  value={comments}
+                  onChange={(event) => {
+                    setComments(event.target.value);
+                  }}
                 />
               </Grid>
               <Grid item xs={12} sm={12}>
@@ -88,6 +112,10 @@ export default function Home() {
                     row
                     aria-labelledby="adaptation-rating"
                     name="rating-buttons-group"
+                    value={rating}
+                    onChange={(event) => {
+                      setRating(event.target.value);
+                    }}
                   >
                     <FormControlLabel value="1" control={<Radio />} label="1" />
                     <FormControlLabel value="2" control={<Radio />} label="2" />
