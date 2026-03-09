@@ -46,19 +46,19 @@ const getReviews = () => {
   // function a promise, because it is going over the
   // network it needs to be asynchronous.
   return fetch(`${BASE_URL}/reviews/`, {
-  	  method: "GET",
-      headers: {
-        'Content-Type': 'application/json'       
-      }
-  	})
-    .then((response) => {
-      return response.json()
-    }).then((data) => {
-      // using Promise.resolve here will pass the data we have
-      // fetched here as the returnedData passed when we use the function.
-      // getReviews().then((returnedData)=> { // when used in other places.})
-      return Promise.resolve(data)
-    });
+    method: "GET",
+    headers: {
+      'Content-Type': 'application/json'       
+    }
+  })
+  .then((response) => {
+    return response.json()
+  }).then((data) => {
+    // using Promise.resolve here will pass the data we have
+    // fetched here as the returnedData passed when we use the function.
+    // getReviews().then((returnedData)=> { // when used in other places.})
+    return Promise.resolve(data)
+  });
 };
 ```
 Note: although in this case we don't necessarily need to use the last `.then` since we're just using `return Promise.resolve(data)`, I would prefer you folks to use this as you can modify the returned object. Say for example you just a part of that object, then you could just return part of the returned object.
@@ -88,10 +88,10 @@ Note: We're not making a default export because we need to also export other fun
 import { getReviews } from '../utils/api/reviews.js';
 ```
 
-- change that function so that what you can do is change it to use our newly created function.
+- change the `loadAllReviewsButton` function so that it uses our newly created function.
 ```js
   const loadAllReviewsButton = () => {
-    getReviews().then((data)=> {
+    getReviews().then((data) => {
       setReviews(data);
     });
   };
@@ -108,7 +108,7 @@ const postReview = () => {
 8. Let's take a look at the `handleSubmit` in the `pages/index.js` it looks like below.
 ```js
   const handleSubmit = (event) => {
-    event.preventDefault()
+    event.preventDefault();
     fetch(`http://localhost:5000/reviews`, {
       method: "POST",
       headers: {
@@ -166,7 +166,7 @@ const postReview = ({title, comment, rating}) => {
   });
 };
 ```
-Now that we pass in the `title`, `comment` and `rating` as arguments we can pass them in.
+Now that we pass in the `title`, `comment` and `rating` as arguments we can use them in the function.
 9. We need to export our `postReview` function from our `utils/api/reviews.js`
 ```js
 // rest of the reviews function.
@@ -178,10 +178,10 @@ export { getReviews, postReview };
 ```js
 import { getReviews, postReview } from '../utils/api/reviews.js';
 ```
-- Change the the `handleSubmit` function form the below.
+- Change the the `handleSubmit` function from its curent implementation below:
 ```js
   const handleSubmit = (event) => {
-    event.preventDefault()
+    event.preventDefault();
     fetch(`http://localhost:5000/reviews`, {
       method: "POST",
       headers: {
@@ -203,19 +203,21 @@ import { getReviews, postReview } from '../utils/api/reviews.js';
     });
   };
 ```
-to use our newly created function, since our `title`, `comment`, and `rating` are passed in as an object we'll have to make sure we do the same. Like the following.
+to make use of our newly created function. Like the following:
 ```js
-  const loadAllReviewsButton = () => {
-    fetch(`http://localhost:5000/reviews`)
-      .then((response) => {
-        return response.json();
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    postReview({
+        title,
+        comment: comments,
+        rating
       }).then((data) => {
-        setReviews(data);
-      })
+        setReviews([data, ...reviews]);
+      });
   };
 ```
 
-11. Let's now take a look at the logic in the `pages/index.js` all we have is the following.
+11. Let's now take a look at the logic in the `pages/index.js`. Currently, we have the following:
 ```js 
 // other imports
 
@@ -228,7 +230,7 @@ export default function Home() {
   const [rating, setRating] = useState(0);
 
   const handleSubmit = (event) => {
-    event.preventDefault()
+    event.preventDefault();
     postReview({
         title,
         comment: comments,
