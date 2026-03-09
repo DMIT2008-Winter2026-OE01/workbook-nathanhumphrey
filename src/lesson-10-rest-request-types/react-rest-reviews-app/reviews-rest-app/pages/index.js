@@ -23,6 +23,8 @@ import Typography from '@mui/material/Typography';
 
 import AdaptationReviewCard from '../components/AdaptationReviewCard';
 
+import { getReviews, postReview } from '../utils/api/reviews';
+
 export default function Home() {
   const [reviews, setReviews] = useState([]);
   const [title, setTitle] = useState('');
@@ -31,34 +33,19 @@ export default function Home() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch(`http://localhost:5000/reviews`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        title,
-        comment: comments,
-        rating,
-      }),
-    })
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        reviews.push(data);
-        setReviews([data, ...reviews]);
-      });
+    postReview({
+      title,
+      comment: comments,
+      rating,
+    }).then((data) => {
+      setReviews([data, ...reviews]);
+    });
   };
 
   const loadAllReviewsButton = () => {
-    fetch(`http://localhost:5000/reviews`)
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setReviews(data);
-      });
+    getReviews().then((data) => {
+      setReviews(data);
+    });
   };
 
   return (
