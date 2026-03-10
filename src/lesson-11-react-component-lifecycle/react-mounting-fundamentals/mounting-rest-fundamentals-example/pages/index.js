@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Head from 'next/head';
 
 import AppBar from '@mui/material/AppBar';
@@ -15,7 +15,7 @@ export default function Home() {
     author: 'Author here',
   });
 
-  const handleClick = () => {
+  const changeQuote = () => {
     fetch(RANDOM_QUOTE_URL)
       .then((response) => {
         return response.json();
@@ -26,6 +26,15 @@ export default function Home() {
           author: data.author,
         });
       });
+  };
+
+  useEffect(() => {
+    console.log('Home Mounted, see me in the console!');
+    changeQuote();
+  }, []);
+
+  const handleClick = () => {
+    changeQuote();
   };
 
   return (
