@@ -23,21 +23,21 @@ We'll also be adding alerts, for network errors and we'll be adding some message
 2. Let's load the data when the page is loaded.
 - import `useEffect` in the `pages/index.js` file
 ```js
-import {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react';
 
 // ... rest of file ...
 ```
 - under the `useState` hooks, let's create an "effect" so that we can execute something when the component is mounted.
 ```js
 export default function Home() {
-  const [reviews, setReviews] = useState([])
-  const [title, setTitle] = useState("")
-  const [comments, setComments] = useState("")
-  const [rating, setRating] = useState(0)
+  const [reviews, setReviews] = useState([]);
+  const [title, setTitle] = useState("");
+  const [comments, setComments] = useState("");
+  const [rating, setRating] = useState(0);
 
-  useEffect(()=> {
-    console.log("Home mounted")
-  }, [])
+  useEffect(() => {
+    console.log("Home mounted");
+  }, []);
 
   // ... rest of file ...
 ```
@@ -55,30 +55,30 @@ After reruning this you should see "Home mounted" only once.
 - We're going to change the `loadAllReviewsButton` function name to `loadAllReviews` so our component should now look like this:
 ```js
 export default function Home() {
-  const [reviews, setReviews] = useState([])
-  const [title, setTitle] = useState("")
-  const [comments, setComments] = useState("")
-  const [rating, setRating] = useState(0)
+  const [reviews, setReviews] = useState([]);
+  const [title, setTitle] = useState("");
+  const [comments, setComments] = useState("");
+  const [rating, setRating] = useState(0);
 
   useEffect(()=> {
-    console.log("Home mounted")
-  }, [])
+    console.log("Home mounted");
+  }, []);
 
   const handleSubmit = (event) => {
-    event.preventDefault()
+    event.preventDefault();
     postReview({
         title,
         comment: comments,
         rating
       }).then((data)=> {
         setReviews([data, ...reviews])
-      })
-  }
+      });
+  };
 
   const loadAllReviews = () => {
-    getReviews().then((data)=> {
-      setReviews(data)
-    })
+    getReviews().then((data) => {
+      setReviews(data);
+    });
   }
 
   // ... rest of the component ...
@@ -87,16 +87,16 @@ export default function Home() {
 - Now let's call `loadAllReviews` function in our `useEffect`, because we want to call to call our function on mount we need our second argument to use an empty dependency array `[]`.
 ```js
 export default function Home() {
-  const [reviews, setReviews] = useState([])
-  const [title, setTitle] = useState("")
-  const [comments, setComments] = useState("")
-  const [rating, setRating] = useState(0)
+  const [reviews, setReviews] = useState([]);
+  const [title, setTitle] = useState("");
+  const [comments, setComments] = useState("");
+  const [rating, setRating] = useState(0);
 
   // on the client side, our function will fetch
   // all of our reviews on loading of the page.
-  useEffect(()=> {
-    loadAllReviews()
-  }, [])
+  useEffect(() => {
+    loadAllReviews();
+  }, []);
 
   // ... rest of file ...
 ```
@@ -158,7 +158,7 @@ import IconButton from '@mui/material/IconButton';
       pb: 2,
     }}
   >
-  {reviews.map((adaptation, index)=> {
+  {reviews.map((adaptation, index) => {
     return <AdaptationReviewCard
         key={index}
         id={adaptation.id}
@@ -174,13 +174,13 @@ import IconButton from '@mui/material/IconButton';
 export default function AdaptationReviewCard(props) {
   const deleteReviewHandler = (reviewId) => {
     console.log(`deleting ${reviewId}...`)
-  }
+  };
 
   // ... rest of the jsx ...
 ```
 - in the `CardHeader`'s `IconButton` add an `onClick` event that will execute the function `deleteReviewHandler` and pass in the `props.id` (that we passed as a prop in `pages/index.js`). The jsx of `components/AdaptationReviewCard.js` should look like below.
 ```jsx
-  <IconButton onClick={()=> {deleteReviewHandler(props.id)}}>
+  <IconButton onClick={() => {deleteReviewHandler(props.id)}}>
     <DeleteIcon />
   </IconButton>
 ```
@@ -190,21 +190,21 @@ When you click the delete button it should add a console message.
 - Observe we'll be changing the stateful list `reviews` we'll need to create the function in the `pages/index.js` and pass it by reference as a prop to our `AdaptationReviewCard` handler. Since we'll be modifying this list let's add an effect to observe all changes in the `reviews` variable under our "mounting" effect like so.
 ```js
 export default function Home() {
-  const [reviews, setReviews] = useState([])
-  const [title, setTitle] = useState("")
-  const [comments, setComments] = useState("")
-  const [rating, setRating] = useState(0)
+  const [reviews, setReviews] = useState([]);
+  const [title, setTitle] = useState("");
+  const [comments, setComments] = useState("");
+  const [rating, setRating] = useState(0);
 
   // on the client side, our function will fetch
   // all of our reviews on loading of the page.
-  useEffect(()=> {
-    loadAllReviews()
-  }, [])
+  useEffect(() => {
+    loadAllReviews();
+  }, []);
 
   // for debugging "reviews" purposes only
-  useEffect(()=> {
-    console.log(reviews)
-  }, [reviews])
+  useEffect(() => {
+    console.log(reviews);
+  }, [reviews]);
 
   // ... rest of your application ...
 ```
@@ -212,27 +212,27 @@ This will allow us to see all of the changes when we add or remove a review.
 - Let's create a function in our `pages/index.js` that will delete our review with a specific `deleteReviewId` in the `reviews` list. So our `pages/index.js` should be like this.
 ```js
 export default function Home() {
-  const [reviews, setReviews] = useState([])
-  const [title, setTitle] = useState("")
-  const [comments, setComments] = useState("")
-  const [rating, setRating] = useState(0)
+  const [reviews, setReviews] = useState([]);
+  const [title, setTitle] = useState("");
+  const [comments, setComments] = useState("");
+  const [rating, setRating] = useState(0);
 
   // on the client side, our function will fetch
   // all of our reviews on loading of the page.
   useEffect(()=> {
-    loadAllReviews()
-  }, [])
+    loadAllReviews();
+  }, []);
 
   // for debugging "reviews" purposes only
   useEffect(()=> {
-    console.log(reviews)
-  }, [reviews])
+    console.log(reviews);
+  }, [reviews]);
 
   const deleteReviewItem = (deleteReviewId) => {
-    let allReviews = reviews.filter((review)=> {
+    let allReviews = reviews.filter((review) => {
       return review.id !== deleteReviewId
-    })
-    setReviews(allReviews)
+    });
+    setReviews(allReviews);
   }
 
   // ...rest of the component...
@@ -241,7 +241,7 @@ Note: we're just creating a new list with all of the reviews by filtering the re
 
 - to use this function in our `AdaptationReviewCard` component we need to pass it by reference (so not call it) to the props of this component. So below we're adding the `deleteCallback` prop to be equal to `deleteReviewItem` in our JSX as follows:
 ```jsx
-  {reviews.map((adaptation, index)=> {
+  {reviews.map((adaptation, index) => {
     return <AdaptationReviewCard
         key={index}
         id={adaptation.id}
@@ -256,9 +256,9 @@ Note: we're just creating a new list with all of the reviews by filtering the re
 ```js
 export default function AdaptationReviewCard(props) {
   const deleteReviewHandler = (reviewId) => {
-    console.log(`deleting ${reviewId}...`)
-    props.deleteCallback(reviewId)
-  }
+    console.log(`deleting ${reviewId}...`);
+    props.deleteCallback(reviewId);
+  };
 
   //... rest of the jsx ...
 ```
@@ -276,11 +276,11 @@ const deleteReviewItem = (id) => {
   return fetch(`${BASE_URL}/reviews/${id}/`, {
     method: "DELETE"
   }).then((response)=> {
-    return response.json()
+    return response.json();
   }).then((data)=> {
-    return Promise.resolve(data)
-  })
-} 
+    return Promise.resolve(data);
+  });
+};
 
 export { getReviews, postReview, deleteReviewItem }
 ```
@@ -288,7 +288,7 @@ export { getReviews, postReview, deleteReviewItem }
 ```js
 // ... other imports ...
 
-import {deleteReviewItem} from '../utils/api/reviews.js'
+import {deleteReviewItem} from '../utils/api/reviews.js';
 
 export default function AdaptationReviewCard(props) {
 
@@ -299,9 +299,9 @@ export default function AdaptationReviewCard(props) {
 // ... other imports ...
 export default function AdaptationReviewCard(props) {
   const deleteReviewHandler = (reviewId) => {
-    console.log(`deleting ${reviewId}...`)
-    deleteReviewItem(reviewId).then((data)=> {
-      props.deleteCallback(reviewId)
+    console.log(`deleting ${reviewId}...`);
+    deleteReviewItem(reviewId).then((data) => {
+      props.deleteCallback(reviewId);
     })
   }
 
