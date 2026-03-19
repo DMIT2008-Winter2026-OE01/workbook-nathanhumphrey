@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import Head from 'next/head';
 
 import Typography from '@mui/material/Typography';
@@ -5,8 +6,20 @@ import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 
 import NavBar from '@components/NavBar';
+import AgencyCard from '@components/AgencyCard';
+
+import { getAgencies } from '@utils/api/agencies';
 
 export default function Home() {
+  const [agenciesData, setAgenciesData] = useState([]);
+
+  useEffect(() => {
+    // fire this on load.
+    getAgencies().then((data) => {
+      console.log(data);
+      setAgenciesData(data.results);
+    });
+  }, []);
   return (
     <div>
       <Head>
@@ -26,7 +39,20 @@ export default function Home() {
             flexDirection: 'column',
             alignItems: 'center',
           }}
-        ></Box>
+        >
+          {agenciesData.map((agency) => {
+            return (
+              <AgencyCard
+                key={agency.id}
+                id={agency.id}
+                imageUrl={agency.image_url}
+                name={agency.name}
+                abbreviation={agency.abbrev}
+                description={agency.description}
+              />
+            );
+          })}
+        </Box>
       </Container>
     </div>
   );
