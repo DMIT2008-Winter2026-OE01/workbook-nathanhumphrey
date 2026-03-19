@@ -73,6 +73,7 @@ You'll also see that there's a `NavBar` component in both pages.
 
       // ... existing imports ...
 
+      import AgencyCard from '@components/AgencyCard';
       import { getAgencies } from '@utils/api/agencies';
 
       // ... rest of the component ...
@@ -391,6 +392,7 @@ You'll also see that there's a `NavBar` component in both pages.
                     buttonName="Go to SpaceCraft"
                   />
             })}
+          </Grid>
         </Grid>
       </Container>
       ```
