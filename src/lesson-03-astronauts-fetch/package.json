@@ -1,0 +1,18 @@
+{
+  "name": "lesson-03-astronauts-fetch",
+  "version": "1.0.0",
+  "description": "In this example we're going to see past and present astronauts.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^7.3.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  }
+}

@@ -18,6 +18,11 @@ $ pnpm dlx tiged --disable-cache --force PROG-1234/Instructor-Workbook/src/008/d
 //      |- Command to run               |- Instructor's source folder (on GitHub)        |- Your local destination folder
 ```
 
+**npm version for Nathan Humphrey's (mine) 1252 OE01 section (replace xx with the desired lesson folder):**
+```sh
+npx tiged --disable-cache --force DMIT2008-Winter2026-OE01/workbook-nathanhumphrey/src/lesson-xx ./src/lesson-xx
+```
+
 A more detailed explanation of the command would look like this:
 
 ```bash
